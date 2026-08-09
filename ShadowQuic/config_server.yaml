@@ -1,0 +1,12 @@
+listeners:
+  - name: "shadowquic-server"
+    type: shadowquic
+    port: 443
+    listen: "0.0.0.0"
+    users:
+      - username: ""
+        password: ""
+    jls-upstream:
+      addr: "test.com:443" # JLS目标网站
+      sni: "test.com"
+    alpn: ["h3"]

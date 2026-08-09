@@ -1,0 +1,11 @@
+proxies:
+  - name: "Shadowquic"
+    type: shadowquic
+    server: "" #IP
+    port: 443
+    udp: true
+    username: ""
+    password: ""
+    sni: "test.com" #JLS Sni
+    zero-rtt: true
+    alpn: [h3]
