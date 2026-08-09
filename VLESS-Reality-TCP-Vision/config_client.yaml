@@ -12,6 +12,6 @@ proxies:
     client-fingerprint: "chrome"
     network: "tcp"
     reality-opts:
-      public-key: "pub key"
+      public-key: "" # 运行mihomo generate reality-keypair 命令生成，取PublicKey填写
       short-id: ""
       support-x25519mlkem768: true # 支持X25519MLKEM768

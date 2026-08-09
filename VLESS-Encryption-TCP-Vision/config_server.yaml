@@ -1,0 +1,11 @@
+listeners:
+  - name: "vless-enc-server"
+    type: vless
+    port: 443
+    listen: "0.0.0.0"
+    users:
+      - username: 1
+        uuid: ""
+        flow: "xtls-rprx-vision"
+    # 运行mihomo generate vless-x25519 和 mihomo generate vless-mlkem768 生成,取decryption填写
+    decryption: ""

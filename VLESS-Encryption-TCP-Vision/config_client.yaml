@@ -1,0 +1,11 @@
+proxies:
+  - name: "VLESS-ENC-Vision"
+    type: "vless"
+    server: "server_ip" #服务器地址
+    port: 443
+    udp: true
+    uuid: "" # UUID
+    flow: "xtls-rprx-vision"
+    network: "tcp"
+    encryption: ""
+# 运行mihomo generate vless-x25519 和 mihomo generate vless-mlkem768 生成,取encryption填写
