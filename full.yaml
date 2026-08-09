@@ -1,0 +1,14 @@
+log-level: silent
+dns:
+  enable: true
+  nameserver:
+    - 1.1.1.1 #DNS服务器
+proxies:
+  - name: freedom
+    type: direct
+    # IPv4优先
+    ip-version: ipv4-prefer
+rules:
+  - MATCH,freedom
+
+listeners:

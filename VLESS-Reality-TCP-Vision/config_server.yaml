@@ -1,0 +1,16 @@
+listeners:
+  - name: "vless-reality-server"
+    type: vless
+    port: 443
+    listen: "0.0.0.0"
+    users:
+      - username: 1
+        uuid: "" # UUID
+        flow: "xtls-rprx-vision"
+    reality-config:
+      dest: "test.com:443"
+      private-key: "" # 运行mihomo generate reality-keypair 命令生成，取PrivateKey填写
+      short-id:
+        - "" # 16位16进制字符串
+      server-names:
+        - "test.com" #叶子证书包含的Servername

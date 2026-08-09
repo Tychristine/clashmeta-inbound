@@ -1,0 +1,17 @@
+proxies:
+  - name: "VLESS-Reality"
+    type: "vless"
+    server: "server_ip" #服务器地址
+    port: 443
+    udp: true
+    uuid: "" # UUID
+    flow: "xtls-rprx-vision"
+    tls: true
+    servername: ""
+    alpn: ["h2", "http/1.1"]
+    client-fingerprint: "chrome"
+    network: "tcp"
+    reality-opts:
+      public-key: "pub key"
+      short-id: ""
+      support-x25519mlkem768: true # 支持X25519MLKEM768
