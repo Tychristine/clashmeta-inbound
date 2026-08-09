@@ -58,7 +58,6 @@ curl -fsSL -o "${TMP_DIR}/${FILENAME}" "$DOWNLOAD_URL" || {
 }
 ok "下载完成"
 
-info "解压..."
 gzip -d "${TMP_DIR}/${FILENAME}" || {
     err "解压失败"
     exit 1
@@ -80,9 +79,9 @@ if systemctl is-active --quiet mihomo 2>/dev/null; then
 fi
 
 
-info "安装二进制到 ${INSTALL_DIR}/mihomo"
+info "安装到 ${INSTALL_DIR}/mihomo"
 install -m 755 "$EXTRACTED_FILE" "${INSTALL_DIR}/mihomo"
-ok "二进制已安装"
+ok "安装完成"
 
 # ─── 创建运行目录 ──────────────────────────────────────────
 if [[ ! -d "$RUN_DIR" ]]; then
@@ -91,7 +90,7 @@ if [[ ! -d "$RUN_DIR" ]]; then
 fi
 
 # ─── 创建 systemd service ──────────────────────────────────
-info "写入 systemd service 文件: ${SERVICE_FILE}"
+info "创建 systemd service 文件: ${SERVICE_FILE}"
 cat > "$SERVICE_FILE" << 'SERVICEEOF'
 [Unit]
 Description=mihomo Daemon, Another Clash Kernel.
@@ -134,10 +133,10 @@ if [[ -f "$OLD_BACKUP" ]]; then
 fi
 
 # ─── 重新加载 systemd 并启用服务 ───────────────────────────
-info "重新加载 systemd 配置..."
+info "重新载入systemd服务单元..."
 systemctl daemon-reload
 
-info "启用 mihomo 服务（开机自启）..."
+info "启用开机自启动 mihomo 服务..."
 systemctl enable mihomo
 
 info "启动 mihomo 服务..."
@@ -146,7 +145,7 @@ systemctl start mihomo
 # ─── 验证安装 ──────────────────────────────────────────────
 sleep 1
 if systemctl is-active --quiet mihomo; then
-    ok "mihomo ${TAG_NAME} 安装完成并已成功启动！"
+    ok "mihomo ${TAG_NAME} 安装完成"
     echo ""
     echo -e "  版本:     ${GREEN}${TAG_NAME}${NC}"
     echo -e "  二进制:   ${INSTALL_DIR}/mihomo"
