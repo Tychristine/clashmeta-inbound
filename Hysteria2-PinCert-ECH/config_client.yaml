@@ -1,0 +1,16 @@
+proxies:
+  - name: "Hysteria2"
+    type: hysteria2
+    server: "127.0.0.1"
+    port: 443
+    password: "yourpassword"
+    # up: "1000 Mbps"
+    # down: "1000 Mbps"
+    sni: "custom.example.com"
+    # 使用openssl x509 -noout -fingerprint -sha256 -inform pem -in yourcert.pem获取
+    fingerprint: "8B:90:xx:xx"
+    alpn: [h3]
+    # 如果填写则开启ech(可由 mihomo generate ech-keypair <明文域名> 生成)
+    ech-opts:
+      enable: true
+      config: "AE3+xxx"
