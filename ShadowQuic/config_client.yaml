@@ -6,6 +6,8 @@ proxies:
     udp: true
     username: ""
     password: ""
+    quic-versions: [v2]
+    congestion-controller: "bbr"
     sni: "test.com" #JLS Sni
     zero-rtt: true
     alpn: [h3]

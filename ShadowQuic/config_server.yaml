@@ -3,6 +3,8 @@ listeners:
     type: shadowquic
     port: 443
     listen: "0.0.0.0"
+    quic-versions: [v2]
+    congestion-controller: "bbr"
     users:
       - username: ""
         password: ""
