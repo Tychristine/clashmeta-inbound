@@ -1,0 +1,20 @@
+proxies:
+  - name: "VLESS-TLS-CDN"
+    type: "vless"
+    server: "server_ip" # IP
+    port: 443
+    udp: true
+    uuid: "" # UUID
+    encryption: "" # 运行mihomo generate vless-x25519 和 mihomo generate vless-mlkem768 生成,取encryption填写
+    flow: "xtls-rprx-vision"
+    tls: true
+    servername: ""
+    alpn: ["h2", "http/1.1"]
+    client-fingerprint: "chrome"
+    network: "xhttp"
+    xhttp-opts:
+      path: "/path"
+      host: "" # 同sni
+      mode: "auto"
+      reuse-settings:
+        max-concurrency: "16" # "16-32"

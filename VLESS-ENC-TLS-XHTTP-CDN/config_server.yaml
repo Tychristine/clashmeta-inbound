@@ -1,0 +1,16 @@
+listeners:
+  - name: "vless-tls-server"
+    type: vless
+    port: 443
+    listen: "0.0.0.0"
+    decryption: "" # 运行mihomo generate vless-x25519 和 mihomo generate vless-mlkem768 生成,取decryption填写
+    users:
+      - username: 1
+        uuid: "" # UUID
+        flow: "xtls-rprx-vision"
+    certificate: "./cert.pem" # origin源站证书
+    private-key: "./cert.key" # 证书私钥
+    xhttp-config:
+      host: ""
+      path: "/path" #/随机字符串
+      mode: "auto"
