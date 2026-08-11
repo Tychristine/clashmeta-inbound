@@ -6,11 +6,14 @@ listeners:
     users:
       user1: "password1"
       user2: "password2"
-    ignore-client-bandwidth: true
+    # 服务端限速
+    up: 50
+    down: 20
+    ignore-client-bandwidth: true #忽略客户端速率协商，只使用bbr
     # masquerade: "https://example.com:443" #伪装地址
     alpn: ["h3"]
-    certificate: "./server.crt" # 证书的路径
-    private-key: "./server.key" # 私钥路径
+    certificate: "./server.crt"
+    private-key: "./server.key"
     # 如果填写则开启ech(可由 mihomo generate ech-keypair <明文域名> 生成)
     ech-key: |
       -----BEGIN ECH KEYS-----
