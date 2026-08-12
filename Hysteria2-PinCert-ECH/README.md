@@ -1,6 +1,6 @@
 # Hysteria2-PinnedPeerCertSha256
 
-**Hysteria2+pinSha256+ECH**搭配，适用于自签证书
+**Hysteria2+PinnedPeerCertSha256+ECH**搭配，适用于自签证书
 
 ## 服务端
 
