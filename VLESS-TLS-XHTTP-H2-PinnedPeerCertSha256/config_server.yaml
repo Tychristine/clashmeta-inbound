@@ -1,0 +1,17 @@
+listeners:
+  - name: "vless-tls-server"
+    type: vless
+    port: 443
+    listen: "0.0.0.0"
+    users:
+      - username: 1
+        uuid: "" # UUID
+        flow: ""
+    # TLS证书和私钥路径
+    certificate: "./server.pem"
+    private-key: "./server.key"
+    # XHTTP
+    xhttp-config:
+      host: ""
+      path: "/path" #/随机字符串
+      mode: "auto"

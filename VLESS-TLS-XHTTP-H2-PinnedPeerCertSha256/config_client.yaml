@@ -1,0 +1,19 @@
+proxies:
+  - name: "VLESS-XHTTP"
+    type: "vless"
+    server: "127.0.0.1" # server
+    port: 443
+    uuid: "" # UUID
+    udp: true
+    tls: true
+    servername: "" # 自定义SNI
+    client-fingerprint: "chrome"
+    alpn: ["h2"]
+    fingerprint: "" # 证书指纹
+    network: "xhttp"
+    xhttp-opts:
+      path: "/path" # path
+      host: "" # 同sni
+      mode: "stream-up" #建议stream-up / stream-one
+      reuse-settings:
+        max-concurrency: "16-32"
