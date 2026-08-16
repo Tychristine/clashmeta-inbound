@@ -1,0 +1,21 @@
+listeners:
+  - name: "vless-reality-xhttp"
+    type: vless
+    port: 443
+    listen: "0.0.0.0"
+    users:
+      - username: 1
+        uuid: "" # UUID
+        flow: ""
+    reality-config:
+      dest: "example:443" # Reality Target
+      private-key: "" # 运行mihomo generate reality-keypair生成
+      short-id:
+        - "xxx" # 16位HEX
+      server-names:
+        - "" # 子叶证书包含的Servername
+    xhttp-config:
+      host: ""
+      path: "/path" # 随机字符串
+      mode: "auto"
+

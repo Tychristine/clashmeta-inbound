@@ -10,3 +10,11 @@ some examples for clash.meta(aka. Mihomo) native listeners.
 ```shell
 bash -c "$(curl -L https://raw.githubusercontent.com/Tychristine/clashmeta-inbound/refs/heads/main/install_mihomo.sh)"
 ```
+
+## UUID生成
+
+```bash
+apt install uuid -y
+# 随机生成
+uuid -v 4
+```

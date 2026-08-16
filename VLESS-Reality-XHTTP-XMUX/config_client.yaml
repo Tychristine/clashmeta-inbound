@@ -1,0 +1,23 @@
+proxies:
+  - name: "vless-reality-xhttp"
+    type: vless
+    server: "127.0.0.1"
+    port: 443
+    udp: true
+    uuid: "" # UUID
+    tls: true
+    servername: "" # reality target
+    alpn: ["h2"]
+    client-fingerprint: chrome
+    network: "xhttp"
+    reality-opts:
+      public-key: "" # reality 公钥
+      short-id: ""
+      support-x25519mlkem768: true
+    xhttp-opts:
+      path: "/path" # path
+      host: "" #同sni(必填)
+      mode: "stream-up"
+      reuse-settings:
+        max-concurrency: "16-32"
+
