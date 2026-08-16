@@ -15,6 +15,6 @@ proxies:
     xhttp-opts:
       path: "/path"
       host: "" # 同sni
-      mode: "auto"
+      mode: "stream-one"
       reuse-settings:
         max-concurrency: "16" # "16-32"
