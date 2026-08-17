@@ -7,8 +7,8 @@ listeners:
       user1: "password1"
       user2: "password2"
     # 服务端限速
-    up: 50
-    down: 20
+    up: 1000
+    down: 1000
     ignore-client-bandwidth: true #忽略客户端速率协商，只使用bbr
     # masquerade: "https://example.com:443" #伪装地址
     alpn: ["h3"]

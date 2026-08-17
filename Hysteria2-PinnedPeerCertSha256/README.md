@@ -1,12 +1,6 @@
 # Hysteria2-PinnedPeerCertSha256
 
-**Hysteria2+PinnedPeerCertSha256+ECH**搭配，适用于自签证书
-
-## 服务端
-
-- ech-key
-
-使用`mihomo generate ech-keypair <明文域名>`生成，取Config填写为客户端`ech.opts.config`
+**Hysteria2+PinnedPeerCertSha256**搭配，适用于自签证书
 
 ## 客户端
 

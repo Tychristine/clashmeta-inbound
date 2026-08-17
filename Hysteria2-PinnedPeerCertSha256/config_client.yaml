@@ -6,8 +6,8 @@ proxies:
     password: "password1"
 
     # 客户端速率协商,若服务端'ignore-client-bandwidth: true'则速率不由该项决定(不填up和down服务器会连不通)
-    up: "30 Mbps"
-    down: "100 Mbps"
+    up: "1000 Mbps"
+    down: "1000 Mbps"
     sni: "custom.example.com"
     # 使用openssl x509 -noout -fingerprint -sha256 -inform pem -in yourcert.pem获取
     fingerprint: "8B:90:xx:xx"
