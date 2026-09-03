@@ -8,13 +8,12 @@ some examples for clash.meta(aka. Mihomo) native listeners.
 ## 安装脚本
 
 ```shell
-bash -c "$(curl -L https://raw.githubusercontent.com/Tychristine/clashmeta-inbound/refs/heads/main/install_mihomo.sh)"
+curl -L "https://raw.githubusercontent.com/Tychristine/clashmeta-inbound/refs/heads/main/install_mihomo.sh" | bash
 ```
 
 ## UUID生成
 
 ```bash
 apt install uuid -y
-# 随机生成
 uuid -v 4
 ```
