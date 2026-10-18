@@ -1,0 +1,10 @@
+proxies:
+  - name: "mieru_server"
+    type: "mieru"
+    server: "1.2.4.8"
+    port: 10181
+    transport: "TCP"
+    username: "username1"
+    password: "abc123456"
+    multiplexing: "MULTIPLEXING_LOW"
+    handshake-mode: "HANDSHAKE_STANDARD"

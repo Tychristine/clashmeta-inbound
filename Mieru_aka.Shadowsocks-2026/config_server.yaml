@@ -1,0 +1,10 @@
+listeners:
+  - name: mieru-in-1
+    type: mieru
+    port: 10181
+    listen: "0.0.0.0"
+    # TCP / UDP
+    transport: "TCP"
+    users:
+      username1: "abc123456"
+      # username2: "def123456"
